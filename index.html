@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mustafa Mahmoud Shawky — Senior Architectural Engineer &amp; BIM Specialist</title>
+<meta name="description" content="Portfolio of Mustafa Mahmoud Shawky — Senior Architectural Engineer &amp; BIM Specialist, 19+ years across Kuwait and the Gulf. KUHSC, Dubai Creek Tower, KGOC, Ministries Complex, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c1916;
+  --paper:#f2eee3;
+  --paper-deep:#e9e2d2;
+  --paper-deeper:#ddd3bd;
+  --brand:#7c1c27;
+  --signal:#a8362a;
+  --blue:#2e4756;
+  --blue-soft:#41606f;
+  --line:#c7bca3;
+  --line-soft:#d8cfb9;
+  --muted:#5c5346;
+  --paper-rgb:242,238,227;
+  --maxw:1280px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Work Sans',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+  line-height:1.55;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--brand);color:var(--paper);}
+
+.mono{font-family:'IBM Plex Mono',monospace;}
+.display{font-family:'Big Shoulders Display',sans-serif;font-weight:800;letter-spacing:0.01em;}
+
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--brand);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.eyebrow::before{
+  content:"";
+  width:18px;height:1px;background:var(--brand);display:inline-block;
+}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+/* ===== Top nav ===== */
+.topnav{
+  position:fixed;top:0;left:0;right:0;z-index:90;
+  background:rgba(var(--paper-rgb),0.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.topnav .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.brandmark{
+  font-family:'Big Shoulders Display',sans-serif;
+  font-weight:700;font-size:20px;letter-spacing:0.02em;
+  display:flex;align-items:baseline;gap:8px;
+}
+.brandmark span{
+  font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;color:var(--brand);
+  letter-spacing:0.1em;
+}
+.navlinks{display:flex;gap:28px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;}
+.navlinks a{position:relative;padding:4px 0;color:var(--muted);transition:color .2s;}
+.navlinks a:hover, .navlinks a.active{color:var(--brand);}
+.navlinks a.active::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--brand);}
+.navtoggle{display:none;}
+@media (max-width:860px){
+  .navlinks{display:none;}
+}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;
+  padding:148px 0 90px;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(46,71,86,0.05) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, rgba(46,71,86,0.05) 39px 40px);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:end;
+}
+.hero h1{
+  font-size:clamp(44px,7vw,92px);
+  line-height:0.96;
+  margin:18px 0 0;
+  text-transform:uppercase;
+}
+.hero h1 small{
+  display:block;
+  font-family:'Work Sans',sans-serif;
+  font-weight:600;
+  font-size:0.27em;
+  letter-spacing:0.02em;
+  text-transform:none;
+  color:var(--blue);
+  margin-top:14px;
+}
+.hero-meta{
+  margin-top:28px;
+  display:flex;flex-wrap:wrap;gap:22px 34px;
+  font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);
+}
+.hero-meta div b{display:block;color:var(--ink);font-size:13px;margin-bottom:3px;letter-spacing:0.02em;}
+.hero-cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;
+  padding:13px 22px;border:1px solid var(--ink);display:inline-flex;align-items:center;gap:10px;
+  transition:all .18s ease;cursor:pointer;background:none;
+}
+.btn-fill{background:var(--brand);color:var(--paper);border-color:var(--brand);}
+.btn-fill:hover{background:var(--signal);border-color:var(--signal);}
+.btn-line:hover{background:var(--ink);color:var(--paper);}
+
+.skyline{width:100%;height:auto;}
+.skyline .lab{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;fill:var(--blue-soft);}
+.skyline .dim{stroke:var(--blue-soft);stroke-width:1;opacity:0.55;}
+.skyline .silh{fill:var(--ink);opacity:0.92;}
+.skyline .silh2{fill:var(--brand);opacity:0.85;}
+
+/* ===== Section scaffolding ===== */
+section{position:relative;padding:84px 0;}
+.section-head{
+  display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:24px;
+  border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:48px;
+}
+.section-num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--brand);letter-spacing:.06em;}
+.section-head h2{
+  font-size:clamp(30px,4.4vw,52px);text-transform:uppercase;margin:0;line-height:1;
+}
+.section-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);text-align:right;max-width:220px;line-height:1.4;}
+.alt{background:var(--paper-deep);}
+
+/* ===== About / profile ===== */
+.profile-grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:64px;}
+.profile-lede{font-size:23px;line-height:1.42;font-weight:500;color:var(--ink);}
+.profile-lede b{color:var(--brand);font-weight:700;}
+.profile-body p{color:var(--muted);font-size:15.5px;}
+.profile-body{margin-top:22px;}
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:1px solid var(--line);}
+.stat{padding:20px 14px 0;border-right:1px solid var(--line);}
+.stat:last-child{border-right:none;}
+.stat b{display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:38px;color:var(--brand);line-height:1;}
+.stat span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;display:block;margin-top:6px;}
+
+.legend-card{
+  border:1px solid var(--ink);padding:26px 26px 22px;background:var(--paper);
+  position:relative;
+}
+.legend-card::before{
+  content:"FIG. 01 — CAPABILITY LEGEND";
+  position:absolute;top:-11px;left:20px;background:var(--paper);padding:0 8px;
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;color:var(--blue);
+}
+.legend-row{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:14.5px;}
+.legend-row:last-child{border-bottom:none;}
+.legend-row .lv{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.05em;}
+.dots{display:inline-flex;gap:4px;margin-left:10px;vertical-align:middle;}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--line-soft);}
+.dot.on{background:var(--brand);}
+
+/* ===== Competencies ===== */
+.comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.comp-cell{background:var(--paper);padding:28px 26px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between;}
+.comp-cell h3{font-family:'Big Shoulders Display',sans-serif;font-size:21px;text-transform:uppercase;margin:0 0 10px;letter-spacing:.01em;}
+.comp-cell p{margin:0;color:var(--muted);font-size:14px;}
+.comp-idx{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--brand);}
+
+/* ===== Experience timeline ===== */
+.tl{position:relative;border-left:2px solid var(--ink);margin-left:6px;padding-left:38px;}
+.tl-item{position:relative;padding-bottom:54px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{
+  content:"";position:absolute;left:-46px;top:4px;width:11px;height:11px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--brand);
+}
+.tl-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;margin-bottom:10px;}
+.tl-role{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:25px;text-transform:uppercase;}
+.tl-firm{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--brand);letter-spacing:.04em;}
+.tl-date{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-left:auto;}
+.tl-item ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px;}
+.tl-item li{margin-bottom:7px;}
+.tl-item li b{color:var(--ink);}
+
+/* ===== Projects ===== */
+.filterbar{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+}
+.fbtn{
+  border:1px solid var(--line);background:none;padding:9px 16px;cursor:pointer;color:var(--muted);
+  transition:all .15s;
+}
+.fbtn:hover{border-color:var(--ink);color:var(--ink);}
+.fbtn.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.pcard{
+  border:1px solid var(--line);background:var(--paper);cursor:pointer;overflow:hidden;
+  transition:border-color .18s, transform .18s;
+}
+.pcard:hover{border-color:var(--ink);}
+.pcard .thumb{aspect-ratio:1.414/1;overflow:hidden;background:var(--paper-deeper);position:relative;}
+.pcard .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+.pcard:hover .thumb img{transform:scale(1.045);}
+.pcard .sheetno{
+  position:absolute;top:0;left:0;background:var(--ink);color:var(--paper);
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;
+  padding:5px 9px;
+}
+.pcard .body{padding:16px 18px 18px;border-top:1px solid var(--line);}
+.pcard .cat{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--brand);}
+.pcard h4{font-family:'Big Shoulders Display',sans-serif;font-size:21px;text-transform:uppercase;margin:6px 0 6px;line-height:1.08;}
+.pcard .firm{font-size:12.5px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+
+@media (max-width:980px){.pgrid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.pgrid{grid-template-columns:1fr;}}
+
+/* ===== Lightbox ===== */
+.lb{
+  position:fixed;inset:0;background:rgba(13,11,9,0.92);z-index:200;display:none;
+  padding:40px 24px;overflow-y:auto;
+}
+.lb.open{display:block;}
+.lb-inner{max-width:1080px;margin:0 auto;background:var(--paper);border:1px solid var(--line);}
+.lb-img-wrap{background:#0d0b09;}
+.lb-img-wrap img{width:100%;display:block;}
+.lb-close{
+  position:sticky;top:0;float:right;margin:18px 18px 0 0;
+  background:var(--paper);border:1px solid var(--ink);width:38px;height:38px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;z-index:5;
+}
+.lb-meta{padding:28px 32px 32px;}
+.lb-meta .sheetno{font-family:'IBM Plex Mono',monospace;color:var(--brand);font-size:12px;letter-spacing:.06em;}
+.lb-meta h3{font-family:'Big Shoulders Display',sans-serif;font-size:32px;text-transform:uppercase;margin:8px 0 4px;}
+.lb-meta .firmline{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);margin-bottom:18px;display:block;}
+.lb-meta p{color:var(--muted);font-size:15px;margin:0 0 16px;}
+.lb-stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:6px;border-top:1px solid var(--line);padding-top:18px;}
+.lb-stats div b{display:block;font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--ink);}
+.lb-stats div span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;}
+.lb-scope{margin-top:18px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blue);letter-spacing:.02em;}
+
+/* ===== Education / credentials ===== */
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+.cred-block h3{
+  font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);
+  margin:0 0 16px;
+}
+.cred-list{list-style:none;margin:0;padding:0;}
+.cred-list li{
+  padding:14px 0;border-bottom:1px solid var(--line-soft);display:flex;justify-content:space-between;gap:16px;font-size:14.5px;
+}
+.cred-list li span{color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:nowrap;}
+.edu-box{border:1px solid var(--ink);padding:24px;margin-bottom:18px;}
+.edu-box .deg{font-family:'Big Shoulders Display',sans-serif;font-size:22px;text-transform:uppercase;}
+.edu-box .sch{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);margin-top:6px;}
+
+/* ===== Contact / footer ===== */
+.contact{background:var(--ink);color:var(--paper);}
+.contact .section-head{border-bottom:2px solid rgba(242,238,227,.25);}
+.contact .section-head h2{color:var(--paper);}
+.contact .section-num{color:#e08077;}
+.contact-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:50px;}
+.contact-lede{font-size:24px;font-weight:500;line-height:1.4;max-width:520px;}
+.contact-lede b{color:#e08077;}
+.contact-list{margin-top:30px;display:flex;flex-direction:column;gap:14px;}
+.contact-list a{
+  display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:14px;
+  border-bottom:1px solid rgba(242,238,227,.18);padding-bottom:12px;width:fit-content;min-width:280px;
+  transition:color .15s;
+}
+.contact-list a:hover{color:#e08077;}
+.contact-side{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#bfb6a4;line-height:1.8;}
+.contact-side b{color:var(--paper);}
+
+/* ===== Title block (signature footer) ===== */
+.titleblock{
+  position:fixed;bottom:0;left:0;right:0;z-index:95;
+  background:var(--ink);color:var(--paper);
+  border-top:2px solid var(--brand);
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;
+  display:flex;align-items:stretch;
+}
+.titleblock .wrap{display:flex;align-items:stretch;width:100%;padding:0 28px;}
+.tb-cell{padding:9px 22px 9px 0;border-right:1px solid rgba(242,238,227,.18);display:flex;flex-direction:column;justify-content:center;}
+.tb-cell:last-child{border-right:none;margin-left:auto;padding-right:0;text-align:right;}
+.tb-cell .k{color:#8f8576;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;}
+.tb-cell .v{color:var(--paper);margin-top:2px;font-size:12px;}
+.tb-cell .v.brand{color:#e08077;}
+@media (max-width:860px){
+  .tb-cell:nth-child(3),.tb-cell:nth-child(4){display:none;}
+}
+
+body{padding-bottom:46px;}
+
+@media (max-width:900px){
+  .hero-grid,.profile-grid,.cred-grid,.contact-grid{grid-template-columns:1fr;}
+  .comp-grid{grid-template-columns:1fr 1fr;}
+  .stat-strip{grid-template-columns:1fr 1fr;}
+  .stat{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:4px;}
+}
+@media (max-width:600px){
+  .comp-grid{grid-template-columns:1fr;}
+  .section-head{grid-template-columns:1fr;}
+  .section-tag{text-align:left;}
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <div class="brandmark">MMS <span>ARCHITECTURAL&nbsp;PORTFOLIO</span></div>
+    <div class="navlinks" id="navlinks">
+      <a href="#profile" data-sec="profile">Profile</a>
+      <a href="#capabilities" data-sec="capabilities">Capabilities</a>
+      <a href="#experience" data-sec="experience">Experience</a>
+      <a href="#projects" data-sec="projects">Drawing&nbsp;Set</a>
+      <a href="#credentials" data-sec="credentials">Credentials</a>
+      <a href="#contact" data-sec="contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">DRAWING SET — PORTFOLIO 2026 · REV&nbsp;02</div>
+      <h1>Mustafa Mahmoud<br>Shawky<small>Senior Architectural Engineer &amp; BIM Specialist</small></h1>
+      <div class="hero-meta">
+        <div><b>Location</b>Sabah Al-Salem, Kuwait</div>
+        <div><b>Experience</b>19+ Years, Gulf Region</div>
+        <div><b>Practice</b>Pace · KTCB · Trends</div>
+        <div><b>Registration</b>KSE · Egyptian Eng. Syndicate</div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-fill" href="#projects">View Drawing Set →</a>
+        <a class="btn btn-line" href="Mustafa_Mahmoud_Shawky_CV.pdf" download>Download CV ↓</a>
+        <a class="btn btn-line" href="#contact">Contact</a>
+      </div>
+    </div>
+    <div>
+      <svg class="skyline" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+        <!-- dimension line -->
+        <line x1="20" y1="330" x2="460" y2="330" class="dim"/>
+        <line x1="20" y1="324" x2="20" y2="336" class="dim"/>
+        <line x1="460" y1="324" x2="460" y2="336" class="dim"/>
+        <text x="225" y="348" class="lab">SCALE  1 : 500 — NOT TO SCALE</text>
+        <!-- ground line -->
+        <line x1="10" y1="300" x2="470" y2="300" stroke="var(--ink)" stroke-width="1.4"/>
+        <!-- flat institutional slab -->
+        <rect x="40" y="245" width="95" height="55" class="silh"/>
+        <rect x="50" y="255" width="14" height="14" fill="var(--paper)" opacity="0.85"/>
+        <rect x="74" y="255" width="14" height="14" fill="var(--paper)" opacity="0.85"/>
+        <rect x="98" y="255" width="14" height="14" fill="var(--paper)" opacity="0.85"/>
+        <rect x="50" y="275" width="14" height="14" fill="var(--paper)" opacity="0.85"/>
+        <rect x="74" y="275" width="14" height="14" fill="var(--paper)" opacity="0.85"/>
+        <rect x="98" y="275" width="14" height="14" fill="var(--paper)" opacity="0.85"/>
+        <!-- villa roof -->
+        <polygon points="170,300 170,272 210,255 250,272 250,300" class="silh" opacity="0.55"/>
+        <!-- mosque dome + minarets -->
+        <rect x="278" y="278" width="6" height="22" class="silh2"/>
+        <rect x="356" y="278" width="6" height="22" class="silh2"/>
+        <circle cx="281" cy="272" r="3.4" class="silh2"/>
+        <circle cx="359" cy="272" r="3.4" class="silh2"/>
+        <path d="M295 300 Q295 256 320 256 Q345 256 345 300 Z" class="silh2"/>
+        <!-- twisting tower -->
+        <path d="M395 300 C386 250 404 215 392 175 C384 150 408 130 401 95 L417 95 C412 130 432 150 422 175 C410 215 426 250 419 300 Z" class="silh"/>
+        <line x1="408" y1="95" x2="408" y2="78" stroke="var(--ink)" stroke-width="1.6"/>
+        <circle cx="408" cy="76" r="1.6" fill="var(--ink)"/>
+        <!-- north arrow -->
+        <g transform="translate(40,60)">
+          <circle cx="0" cy="0" r="22" fill="none" stroke="var(--blue-soft)" stroke-width="1"/>
+          <path d="M0,-17 L6,8 L0,2 L-6,8 Z" fill="var(--blue-soft)"/>
+          <text x="0" y="-26" text-anchor="middle" class="lab">N</text>
+        </g>
+        <text x="370" y="60" class="lab">DWG.  HERO-01</text>
+        <text x="370" y="74" class="lab">TYP. BUILT FORM STUDY</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PROFILE ================= -->
+<section id="profile">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">A-001</div>
+      <h2>Profile</h2>
+      <div class="section-tag">Summary of qualifications &amp; practice scope</div>
+    </div>
+    <div class="profile-grid">
+      <div>
+        <p class="profile-lede">Architectural Engineer and <b>BIM Manager</b> with more than <b>19 years</b> leading working-drawing production, advanced Revit modelling, and end-to-end BIM delivery on institutional, healthcare, and government-scale projects across Kuwait and the Gulf.</p>
+        <div class="profile-body">
+          <p>Career built across three practices — Pace, Kuwait Technical Consulting Bureau (KTCB), and Trends — spanning competition-grade landmarks, ministry and oil-company headquarters, hospitals, mosques, and master-planned campuses. Day-to-day work centres on multidisciplinary coordination: sitting between architecture, structural, and MEP teams to find and resolve clashes before they reach the site.</p>
+          <p>A parallel thread runs through every role — using Dynamo and Python to make Revit do things it wasn't built to do. Nineteen-plus custom plugins later, routine modelling and QC tasks that used to take a day now take an hour.</p>
+        </div>
+      </div>
+      <div class="legend-card">
+        <div class="legend-row"><span>BIM &amp; Modelling</span><span class="lv">Revit (Certified) <span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span></span></div>
+        <div class="legend-row"><span>Documentation</span><span class="lv">AutoCAD <span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span></span></div>
+        <div class="legend-row"><span>Coordination</span><span class="lv">Navisworks <span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></span></span></div>
+        <div class="legend-row"><span>Automation</span><span class="lv">Dynamo / Python <span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></span></span></div>
+        <div class="legend-row"><span>Visualisation</span><span class="lv">3DS Max / Lumion <span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></span></span></div>
+        <div class="legend-row"><span>Process</span><span class="lv">BIM 360 / ACC <span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></span></span></div>
+      </div>
+    </div>
+    <div class="stat-strip">
+      <div class="stat"><b>19+</b><span>Years in Practice</span></div>
+      <div class="stat"><b>22</b><span>Major Projects Shown</span></div>
+      <div class="stat"><b>19+</b><span>Revit Plugins Built</span></div>
+      <div class="stat"><b>80%</b><span>Faster Task Turnaround</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAPABILITIES ================= -->
+<section id="capabilities" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">A-002</div>
+      <h2>Capabilities</h2>
+      <div class="section-tag">Core engineering &amp; BIM management competencies</div>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-cell">
+        <div><span class="comp-idx">01</span><h3>Working Drawings</h3><p>Full-set architectural documentation from concept through issued-for-construction, calibrated to international design standards.</p></div>
+      </div>
+      <div class="comp-cell">
+        <div><span class="comp-idx">02</span><h3>Multidisciplinary Coordination</h3><p>Liaison between architecture, structural and MEP — and with international design partners such as Perkins Eastman and Ennead Architects.</p></div>
+      </div>
+      <div class="comp-cell">
+        <div><span class="comp-idx">03</span><h3>Clash Detection &amp; Resolution</h3><p>Rigorous inter-discipline model auditing via Navisworks and BIM 360/ACC to protect design integrity ahead of site issue.</p></div>
+      </div>
+      <div class="comp-cell">
+        <div><span class="comp-idx">04</span><h3>Revit Automation</h3><p>Custom Dynamo scripts and Python nodes that bypass standard Revit limits — built to solve specific modelling and QC bottlenecks.</p></div>
+      </div>
+      <div class="comp-cell">
+        <div><span class="comp-idx">05</span><h3>Onsite Investigation</h3><p>Four years embedded on-site at the KGOC headquarters — supervising contractors and resolving construction-stage discrepancies directly.</p></div>
+      </div>
+      <div class="comp-cell">
+        <div><span class="comp-idx">06</span><h3>Sustainable &amp; Materials Strategy</h3><p>Green-building practice integration and viability assessment of structural and finish materials across 10+ public and private projects.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">A-003</div>
+      <h2>Experience</h2>
+      <div class="section-tag">Three practices, nineteen years, one discipline</div>
+    </div>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-head">
+          <span class="tl-role">Senior Architectural Engineer &amp; BIM Specialist</span>
+          <span class="tl-firm">Pace, Kuwait</span>
+          <span class="tl-date">09/2022 — Present</span>
+        </div>
+        <ul>
+          <li>Leads the multidisciplinary BIM team delivering two <b>Kuwait University Health Sciences Center (KUHSC)</b> buildings — the Allied Health Building and the Learning Resource Centre — through Revit and BIM 360.</li>
+          <li>Primary design-coordination liaison with global partners <b>Perkins Eastman</b> and <b>Ennead Architects</b>, aligning international design intent with local engineering requirements.</li>
+          <li>Directs inter-discipline coordination across architecture, structural and MEP, proactively resolving model clashes before they reach site.</li>
+          <li>Reviewed <b>100+</b> architectural drawings for the <b>Dubai Iconic Tower</b> within a compressed one-week schedule, flagging critical technical risks.</li>
+          <li>Built and deployed <b>19+</b> custom Revit plugins (Dynamo + Python) for modelling, reporting and QC — cutting task turnaround by up to <b>80%</b>.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-head">
+          <span class="tl-role">Registered Architectural Engineer &amp; BIM Manager</span>
+          <span class="tl-firm">Kuwait Technical Consulting Bureau (KTCB)</span>
+          <span class="tl-date">12/2011 — 09/2022</span>
+        </div>
+        <ul>
+          <li>Engineered large-scale administrative and institutional projects across <b>Ahmadi, Jahra, Jaber El-Ahmad and Wafra</b>.</li>
+          <li>Led and mentored a delivery team of <b>4 draftsmen and 2 architects</b> across commercial, corporate and municipal work.</li>
+          <li>Spent <b>4 years embedded on-site</b> at the flagship <b>KGOC</b> headquarters — supervising contractors and resolving structural/architectural issues directly via Revit.</li>
+          <li>Wrote custom Dynamo scripts and Python nodes to bypass standard Revit limitations and solve advanced geometric modelling problems.</li>
+          <li>Integrated sustainable design standards into core commercial and administrative blueprints.</li>
+          <li>Produced high-end renderings and walkthroughs (AutoCAD, Revit, 3DS Max) for multi-stakeholder design review, and assessed material viability for <b>10+</b> major projects.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-head">
+          <span class="tl-role">Architectural Engineer</span>
+          <span class="tl-firm">Trends — Ghaida Al-Khaled Consulting Office</span>
+          <span class="tl-date">01/2008 — 12/2011</span>
+        </div>
+        <ul>
+          <li>Managed core phases of design development, working drawings and documentation for architectural clients.</li>
+          <li>Conducted regular site investigations and construction-monitoring visits, resolving structural discrepancies with on-site crews.</li>
+          <li>Authored marketing and presentation brochures for owner-partners, contributing to a <b>15% increase</b> in real-estate and design sales.</li>
+          <li>Managed client accounts and stakeholder inquiries through structured technical support.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">A-1xx — A-5xx</div>
+      <h2>Drawing Set</h2>
+      <div class="section-tag">22 sheets — select a category or open any sheet</div>
+    </div>
+    <div class="filterbar" id="filterbar">
+      <button class="fbtn active" data-filter="all">All Sheets · 22</button>
+      <button class="fbtn" data-filter="Educational & Healthcare">Educational &amp; Healthcare</button>
+      <button class="fbtn" data-filter="Administrative & Corporate">Administrative &amp; Corporate</button>
+      <button class="fbtn" data-filter="Civic, Islamic & Competitions">Civic, Islamic &amp; Competitions</button>
+      <button class="fbtn" data-filter="Commercial & Mixed-Use">Commercial &amp; Mixed-Use</button>
+      <button class="fbtn" data-filter="Residential">Residential</button>
+    </div>
+    <div class="pgrid" id="pgrid"></div>
+  </div>
+</section>
+
+<!-- ================= CREDENTIALS ================= -->
+<section id="credentials">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">A-901</div>
+      <h2>Credentials</h2>
+      <div class="section-tag">Education, licensure &amp; languages</div>
+    </div>
+    <div class="cred-grid">
+      <div>
+        <div class="edu-box">
+          <div class="deg">Bachelor of Architecture (B.Arch.)</div>
+          <div class="sch">MINIA UNIVERSITY, FACULTY OF ENGINEERING, EGYPT — 2002–2007 · GRADUATED WITH EXCELLENCY</div>
+        </div>
+        <div class="cred-block">
+          <h3>Languages</h3>
+          <ul class="cred-list">
+            <li>Arabic <span>Native</span></li>
+            <li>English <span>Professional — B2, BUSUU Certified</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="cred-block">
+        <h3>Licenses &amp; Certifications</h3>
+        <ul class="cred-list">
+          <li>Project Management Professional (PMP)® <span>PMI</span></li>
+          <li>Registered Professional Architect <span>Kuwait Society of Engineers</span></li>
+          <li>Registered Architect <span>Egyptian Engineers Syndicate</span></li>
+          <li>Broadly Experienced Foreign Architect <span>BEFA — Eligible</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">A-999</div>
+      <h2>Contact</h2>
+      <div class="section-tag">Open to senior BIM &amp; architectural engineering roles</div>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-lede">Available for senior architectural engineering and <b>BIM management</b> opportunities across Kuwait and the wider Gulf region.</p>
+        <div class="contact-list">
+          <a href="mailto:Mustafa_arch07@yahoo.com">✉&nbsp;&nbsp;Mustafa_arch07@yahoo.com</a>
+          <a href="tel:+96599191358">☏&nbsp;&nbsp;+965 9919 1358</a>
+          <a href="https://www.linkedin.com/in/mostafamahmoud-architect" target="_blank" rel="noopener">in&nbsp;&nbsp;linkedin.com/in/mostafamahmoud-architect</a>
+        </div>
+      </div>
+      <div class="contact-side">
+        <b>SABAH AL-SALEM, KUWAIT</b><br>
+        DRAWN BY — M. M. SHAWKY<br>
+        SHEET SIZE — RESPONSIVE / NTS<br>
+        ISSUE — PORTFOLIO 2026, REV 02
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lb">
+  <div class="lb-inner">
+    <div class="lb-close" id="lbClose">✕</div>
+    <div class="lb-img-wrap"><img id="lbImg" src="" alt=""></div>
+    <div class="lb-meta">
+      <div class="sheetno" id="lbSheet"></div>
+      <h3 id="lbTitle"></h3>
+      <span class="firmline" id="lbFirm"></span>
+      <p id="lbDesc"></p>
+      <div class="lb-stats" id="lbStats"></div>
+      <div class="lb-scope" id="lbScope"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= TITLE BLOCK (signature, persistent) ================= -->
+<div class="titleblock">
+  <div class="wrap">
+    <div class="tb-cell"><span class="k">Project</span><span class="v brand">M. M. SHAWKY — PORTFOLIO</span></div>
+    <div class="tb-cell"><span class="k">Sheet</span><span class="v" id="tbSheet">A-000 — COVER</span></div>
+    <div class="tb-cell"><span class="k">Scale</span><span class="v">NTS</span></div>
+    <div class="tb-cell"><span class="k">Rev.</span><span class="v">02 — 2026.06</span></div>
+  </div>
+</div>
+
+<script>
+const PROJECTS = [
+  {slug:"kuhsc", sheet:"A-101", title:"Kuwait University Health Sciences Campus", firm:"Pace", category:"Educational & Healthcare",
+   desc:"A self-sufficient academic and clinical campus on the west side of Kuwait University's main campus in Al-Shadadiyah — interconnected to the University Ring Road and built around four pillars: academic training, clinical care, research, and student life.",
+   stats:[{v:"6",l:"Major Programme Groups"},{v:"3+",l:"Basements"}],
+   scope:"Working drawings & milestone submissions for the Allied Health Building and Learning Resource Centre, via Revit & BIM 360."},
+  {slug:"national-guard-clinic", sheet:"A-102", title:"National Guard Clinic", firm:"KTCB", category:"Educational & Healthcare",
+   desc:"A new-build day-surgery and outpatient medical centre serving Kuwait National Guard personnel and families at Al-Tahrir Camp — ground plus five typical floors of clinical, diagnostic and support functions.",
+   stats:[{v:"~1,100 m²",l:"Per Typical Floor"},{v:"7",l:"Functional Departments"}],
+   scope:"Coordinated architectural, structural and MEP disciplines; produced working drawings, door/window schedules and finish selections."},
+  {slug:"school-kindergarten", sheet:"A-103", title:"Typical School & Kindergarten", firm:"KTCB", category:"Educational & Healthcare",
+   desc:"A repeatable institutional model: matched boys' and girls' high schools on equal-area sites, plus a standalone kindergarten — built for consistent rollout across multiple government sites.",
+   stats:[{v:"20,000 m²",l:"Per School Site"},{v:"7,500 m²",l:"Kindergarten Site"}],
+   scope:"Working drawings, design solutions, and coordination with Public Authority for Housing Welfare review comments."},
+  {slug:"mubarak-staff-college", sheet:"A-104", title:"Mubarak Al Abdullah Joint Command & Staff College", firm:"KTCB", category:"Educational & Healthcare",
+   desc:"A self-contained military education campus near the Ministries Zone in South Surra — National Defense College, Joint Command & Staff College, library, war-games and general theatre, alongside VIP hotel, dormitories and full logistics support.",
+   stats:[{v:"934,300 m²",l:"Site Area"},{v:"500",l:"Officer Population"}],
+   scope:"Working drawings; validated submitted Revit models for BIM accuracy and fire & life-safety compliance."},
+  {slug:"kgoc-hq", sheet:"A-201", title:"Kuwait Gulf Oil Company Headquarters", firm:"KTCB", category:"Administrative & Corporate",
+   desc:"Flagship HQ for one of the largest oil companies in the Gulf, in Ahmadi — five storeys staggered on both wings to reduce footprint while maximising comfort and transparency for a building intended as a regional landmark.",
+   stats:[{v:"102,000 m²",l:"Project Area"},{v:"36,738 m²",l:"Building Area"}],
+   scope:"Mass-design partner; working-drawing development, specification documents, and four years embedded on-site supervising delivery."},
+  {slug:"ministries-complex-jahraa", sheet:"A-202", title:"Ministries Complex, Jahraa", firm:"KTCB", category:"Administrative & Corporate",
+   desc:"A single consolidated campus housing sixteen-plus government ministries and authorities — from Higher Education and Justice to Electricity & Water and Municipality — plus banking, retail and a dedicated training centre.",
+   stats:[{v:"300,000 m²",l:"Project Area"},{v:"194,402 m²",l:"Building Area"}],
+   scope:"Working drawings, design development, specification documents, and inter-discipline coordination."},
+  {slug:"islamic-center-jaber", sheet:"A-203", title:"Islamic Center, Jaber El-Ahmad", firm:"KTCB", category:"Administrative & Corporate",
+   desc:"A Great Mosque with Amiri Suite, mosque administration and Ministry of Awqaf & Islamic Affairs service departments — conceived to express Islamic and Arabic architectural identity in a contemporary register, as a new civic landmark.",
+   stats:[{v:"32,378 m²",l:"Building Area"},{v:"7",l:"Programme Components"}],
+   scope:"Working drawings, design development, mass study and pattern design; specification documents."},
+  {slug:"jo-wafra-offices", sheet:"A-204", title:"New Main Office Buildings, JO-Wafra", firm:"KTCB", category:"Administrative & Corporate",
+   desc:"A multi-building joint-operations campus for WJO and EOR — management, employee and data-centre buildings plus parking for 1,200 cars, sized for both organisations' departments and administration.",
+   stats:[{v:"57,000 m²",l:"WJO + EOR Area Each"},{v:"1,200",l:"Parking Spaces"}],
+   scope:"BIM process management, working drawings, drawing revisions, and cross-discipline coordination."},
+  {slug:"kdsc", sheet:"A-205", title:"Kuwait Digital Startup Campus", firm:"Pace", category:"Administrative & Corporate",
+   desc:"A technology and innovation campus in Mubarak Al-Abdullah City, beside the School of Aviation, Australian University and the International Fairground — ICT labs, fabrication and media labs, AR/VR space, and shared maker facilities for early-stage startups.",
+   stats:[{v:"5+",l:"Lab Typologies"},{v:"1",l:"ICT Innovation Hub"}],
+   scope:"Produced and revised working drawings to international standards; validated submitted Revit models for BIM accuracy and fire & life-safety compliance."},
+  {slug:"olympic-city", sheet:"A-301", title:"Kuwait Olympic City — Competition", firm:"KTCB", category:"Civic, Islamic & Competitions",
+   desc:"Competition concept \"Dew Drops on a Green Leaf\" — a football arena and Olympic swimming pool complex among independent game and athlete-entertainment venues, formed as intriguing separate arenas that read as one iconic brand from above.",
+   stats:[{v:"213,600 m²",l:"Project Area"},{v:"25,000",l:"Football Arena Seats"}],
+   scope:"Main designer for the swimming pool and football arena; primary data collector and design coordinator."},
+  {slug:"dubai-creek-mosque", sheet:"A-302", title:"Dubai Creek Harbour Mosque — Competition", firm:"KTCB", category:"Civic, Islamic & Competitions",
+   desc:"A competition mosque balancing two constraints: the visual dominance of the nearby Dubai Creek Tower, and orientation toward the Qibla — resolved with a single uninterrupted dome and minarets pulled to the dome's edge so neither element competes with the city's icon.",
+   stats:[{v:"6,171",l:"Male Prayer Capacity"},{v:"710",l:"Basement Parking"}],
+   scope:"Concept design, model design, and design-information gathering."},
+  {slug:"sohag-mosque", sheet:"A-303", title:"Sohag Neighbourhood Mosque", firm:"Charity", category:"Civic, Islamic & Competitions",
+   desc:"A charity mosque whose minaret takes the form of a palm tree — rooted in earth, rippling through wave-like surface patterning, and tapering skyward — a literal architectural reading of the Qur'anic image of a goodly tree.",
+   stats:[{v:"645",l:"Main Hall Capacity"},{v:"30",l:"Female Prayer Room"}],
+   scope:"Concept design, model design, and design-information gathering."},
+  {slug:"dhaniya-youth-center", sheet:"A-304", title:"Dhaniya Sabah Al-Salem Youth Center", firm:"KTCB", category:"Civic, Islamic & Competitions",
+   desc:"A youth-development project for the General Sports Authority in Sabah Al-Salem — management, cultural, sport and commercial facilities under one roof, with underground and multi-storey parking.",
+   stats:[{v:"71,490 m²",l:"Project Area"},{v:"KD 15M",l:"Project Cost"}],
+   scope:"Working drawings, drawing revisions, specification documents, and cross-discipline coordination."},
+  {slug:"dubai-creek-tower", sheet:"A-401", title:"Dubai Creek Tower (Dubai Iconic Tower)", firm:"Pace", category:"Commercial & Mixed-Use",
+   desc:"The centrepiece of the Dubai Creek Harbour masterplan — a 510-metre-plus tower topped with a twisting dune-inspired canopy, anchoring landscaped public realm and connecting directly to a neighbouring retail mall.",
+   stats:[{v:"100+",l:"Drawings Reviewed"},{v:"1 Week",l:"Compressed Schedule"}],
+   scope:"Comprehensive design review of 100+ architectural drawings, identifying critical technical and design risks within a one-week window."},
+  {slug:"abdulla-salem-coop", sheet:"A-402", title:"Abdulla El Salem & El Mansoreah Cooperative", firm:"KTCB", category:"Commercial & Mixed-Use",
+   desc:"A neighbourhood cooperative supermarket — fresh produce, dairy, cosmetics, household goods and bakery — over basement, ground and mezzanine levels.",
+   stats:[{v:"3,156 m²",l:"Project Area"},{v:"10",l:"Department Types"}],
+   scope:"Working drawing, design development, concept design, specification documents and cross-discipline coordination."},
+  {slug:"palm-hotel", sheet:"A-403", title:"New Palm Hotel Concept", firm:"Trends", category:"Commercial & Mixed-Use",
+   desc:"A boutique hotel concept with wedding hall, conference facilities, health club and 116 guest rooms and suites — its curved glazed tower form designed as a small-scale landmark.",
+   stats:[{v:"116",l:"Rooms & Suites"},{v:"2,630 m²",l:"Building Area"}],
+   scope:"Concept design, model design, and design-information gathering."},
+  {slug:"salmia-admin-1", sheet:"A-404", title:"El-Salmia Cooperative Admin — Concept 1", firm:"Trends", category:"Commercial & Mixed-Use",
+   desc:"First of two competing massing studies for a cooperative administration building — manager's office, general offices, services and workstations across basement, ground and mezzanine.",
+   stats:[{v:"Concept",l:"01 of 02"},{v:"3",l:"Floor Levels"}],
+   scope:"Concept design, model design, and design-information gathering."},
+  {slug:"salmia-admin-2", sheet:"A-405", title:"El-Salmia Cooperative Admin — Concept 2", firm:"Trends", category:"Commercial & Mixed-Use",
+   desc:"A second, more orthogonal massing alternative for the same El-Salmia administration brief — same programme, different formal language, developed for client comparison.",
+   stats:[{v:"Concept",l:"02 of 02"},{v:"3",l:"Floor Levels"}],
+   scope:"Concept design, model design, and design-information gathering."},
+  {slug:"shamia-branch-1", sheet:"A-406", title:"El-Shamia Cooperative Branch — Concept 1", firm:"Trends", category:"Commercial & Mixed-Use",
+   desc:"A neighbourhood retail branch — sweet shop, laundry, butcher, bakery, garment and grocery units — wrapped in a single curved canopy form with an efficient looped internal circulation plan.",
+   stats:[{v:"8",l:"Retail Units"},{v:"Concept",l:"01 of 02"}],
+   scope:"Concept design, model design, and design-information gathering."},
+  {slug:"shamia-admin-2", sheet:"A-407", title:"El-Shamia Cooperative Admin — Concept 2", firm:"Trends", category:"Commercial & Mixed-Use",
+   desc:"An alternative administration-building concept for the same El-Shamia cooperative brief, exploring a bolder sculptural massing for the entry and signage drum.",
+   stats:[{v:"8",l:"Retail Units"},{v:"Concept",l:"02 of 02"}],
+   scope:"Concept design, model design, and design-information gathering."},
+  {slug:"reka-admin", sheet:"A-408", title:"El-Reka Cooperative Admin — Façade Concept", firm:"Trends", category:"Commercial & Mixed-Use",
+   desc:"A façade renovation and extension for an existing cooperative administration building — new shops, offices and stores layered onto the existing structure to refresh its street presence.",
+   stats:[{v:"Renovation",l:"+ Extension"},{v:"3",l:"New Programme Types"}],
+   scope:"Concept design, model design, and design-information gathering."},
+  {slug:"villa-complex-saudi", sheet:"A-501", title:"100-Villa Compound, Saudi Arabia", firm:"Trends", category:"Residential",
+   desc:"A 100-unit residential compound in Al-Khobar designed to be economical without feeling it — each villa with a driver's room, private pool, garden, four bedrooms and five bathrooms.",
+   stats:[{v:"100",l:"Villa Units"},{v:"70,000 m²",l:"Land Area"}],
+   scope:"Design concept, development and model design; design-information gathering and cross-discipline coordination."},
+];
+
+const grid = document.getElementById('pgrid');
+const filterbar = document.getElementById('filterbar');
+
+function cardHTML(p){
+  return `<div class="pcard" data-slug="${p.slug}" data-cat="${p.category}">
+    <div class="thumb"><span class="sheetno">${p.sheet}</span><img loading="lazy" src="images/card/${p.slug}.jpg" alt="${p.title}"></div>
+    <div class="body">
+      <div class="cat">${p.category}</div>
+      <h4>${p.title}</h4>
+      <div class="firm">${p.firm}</div>
+    </div>
+  </div>`;
+}
+
+function render(filter){
+  const list = filter==='all' ? PROJECTS : PROJECTS.filter(p=>p.category===filter);
+  grid.innerHTML = list.map(cardHTML).join('');
+  grid.querySelectorAll('.pcard').forEach(el=>{
+    el.addEventListener('click', ()=>openLB(el.dataset.slug));
+  });
+}
+render('all');
+
+filterbar.querySelectorAll('.fbtn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    filterbar.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.filter);
+  });
+});
+
+const lb = document.getElementById('lb');
+function openLB(slug){
+  const p = PROJECTS.find(x=>x.slug===slug);
+  if(!p) return;
+  document.getElementById('lbImg').src = `images/full/${p.slug}.jpg`;
+  document.getElementById('lbImg').alt = p.title;
+  document.getElementById('lbSheet').textContent = `${p.sheet} — ${p.firm.toUpperCase()}`;
+  document.getElementById('lbTitle').textContent = p.title;
+  document.getElementById('lbFirm').textContent = p.category;
+  document.getElementById('lbDesc').textContent = p.desc;
+  document.getElementById('lbStats').innerHTML = p.stats.map(s=>`<div><b>${s.v}</b><span>${s.l}</span></div>`).join('');
+  document.getElementById('lbScope').textContent = "SCOPE — " + p.scope;
+  lb.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+document.getElementById('lbClose').addEventListener('click', closeLB);
+lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLB(); });
+document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLB(); });
+function closeLB(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+
+/* Scroll-spy for nav + title block */
+const sections = ['top','profile','capabilities','experience','projects','credentials','contact'];
+const sheetLabels = {
+  top:'A-000 — COVER', profile:'A-001 — PROFILE', capabilities:'A-002 — CAPABILITIES',
+  experience:'A-003 — EXPERIENCE', projects:'A-1XX — DRAWING SET', credentials:'A-901 — CREDENTIALS',
+  contact:'A-999 — CONTACT'
+};
+const tbSheet = document.getElementById('tbSheet');
+const navLinks = document.querySelectorAll('.navlinks a');
+
+function onScroll(){
+  let current = 'top';
+  for(const id of sections){
+    const el = document.getElementById(id);
+    if(el && el.getBoundingClientRect().top <= 140) current = id;
+  }
+  tbSheet.textContent = sheetLabels[current];
+  navLinks.forEach(a=>a.classList.toggle('active', a.dataset.sec===current));
+}
+document.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+</script>
+</body>
+</html>
