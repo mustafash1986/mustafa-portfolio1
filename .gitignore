@@ -1,0 +1,18 @@
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Planning files (Internal AI Planning & Docs)
+plan.md
+flow.md
+AGENTS.md
+architecture.md
+tasks.md
+*.plan.md
+
+# Raw uncompressed source assets directory
+Source/
+*.py
+portfolio_pages_raw.json
