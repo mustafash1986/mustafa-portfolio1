@@ -1,4 +1,4 @@
-# OS & Editor
+﻿# OS & Editor
 .DS_Store
 Thumbs.db
 .vscode/
@@ -13,6 +13,7 @@ tasks.md
 *.plan.md
 
 # Raw uncompressed source assets directory
-Source/
+Source/*.pdf
 *.py
 portfolio_pages_raw.json
+
